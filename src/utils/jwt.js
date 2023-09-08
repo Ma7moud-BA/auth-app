@@ -1,6 +1,6 @@
 import Jwt from "jsonwebtoken";
 const default_Options = {
-	expiresIn: "1h",
+	expiresIn: "1d",
 };
 export function signJwtAccessToken(payload, options = default_Options) {
 	const secretKey = process.env.SECRET_KEY;

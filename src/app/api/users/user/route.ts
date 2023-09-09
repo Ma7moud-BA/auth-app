@@ -1,7 +1,7 @@
 import { getDateFromToken } from "@/helpers/getDataFromToken";
 import { NextResponse, NextRequest } from "next/server";
 import User from "@/models/userModel";
-import { connect } from "@/app/dbConfig/dbConfig";
+import { connect } from "@/dbConfig/dbConfig";
 import { verifyJwt } from "@/utils/jwt";
 connect();
 

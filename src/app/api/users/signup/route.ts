@@ -1,7 +1,8 @@
-import { connect } from "@/app/dbConfig/dbConfig";
+import { connect } from "@/dbConfig/dbConfig";
 import User from "@/models/userModel";
 import { NextResponse, NextRequest } from "next/server";
 import { hashPassword } from "@/utils/encryptingPassword";
+import { sendEmail } from "@/helpers/helpers";
 connect();
 
 export async function POST(req: NextRequest) {
@@ -30,8 +31,8 @@ export async function POST(req: NextRequest) {
 		});
 
 		const savedUser = await newUser.save();
-
-		console.log(savedUser);
+		//send verification email
+		await sendEmail(email, "VERIFY", savedUser._id);
 		return new NextResponse(
 			JSON.stringify({ message: "User created successfully", User: savedUser }),
 			{

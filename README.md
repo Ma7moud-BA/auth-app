@@ -1,34 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Authentication System with Next.js
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This project is a mini-authentication system implemented using Next.js. It allows users to sign up, log in, and receive a verification email upon signing up. The project uses various technologies and libraries to accomplish these tasks.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## Technologies Used
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Next.js: A React framework for building server-rendered applications.
+- TypeScript: A statically typed superset of JavaScript.
+- MongoDB: A NoSQL database for storing user information.
+- Mongoose: An ODM (Object Data Modeling) library for MongoDB.
+- JWT (JSON Web Tokens): Used for secure user authentication and authorization.
+- Bcrypt: A password hashing library to securely store user passwords.
+- Next.js `NextResponse` cookies: For secure storage of user tokens.
+- Tailwind CSS: A utility-first CSS framework for styling.
+- Axios: A library for making HTTP requests to the server.
+- Nodemailer: For sending verification emails.
+- Mailtrap: A fake SMTP server for testing email functionality.
+- React Hot Toast: To display user-friendly toasts for notifications.
+- React Spinners: To show loading spinners.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Features
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- TypeScript: The project is written in TypeScript for better code quality and readability.
+- User Registration: Users can sign up with their email and password.
+- Email Verification: A verification email is sent to the user upon successful registration.
+- User Login: Registered users can log in using their credentials.
+- JWT Authentication: JSON Web Tokens are used to authenticate and authorize users.
+- Secure Password Storage: User passwords are securely hashed using bcrypt.
+- User Feedback: React Hot Toast is used for user-friendly notifications.
+- Loading Indicators: React Spinners are used to indicate loading states.
